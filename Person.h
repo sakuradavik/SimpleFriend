@@ -4,6 +4,14 @@
 
 using namespace std;
 
+/*
+	To be particular, each Person object is 
+	responsible for maintaining a list of its “friends,”
+	 which will be other Person objects. As real-world 
+	 people tend to have differing degrees of extraversion/outgoingness, 
+	 each Person will have a different “capacity” for friendship.
+*/
+
 class Person
 {
 public:

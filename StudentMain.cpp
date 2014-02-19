@@ -4,12 +4,14 @@
 
 int main()
 {
+	//Create the friends we will be adding
 	Person* pm = new Person("Peyton","Manning",37,3);
 	Person* al = new Person("Andrew","Luck",24,4);
 	Person* ck = new Person("Colin","Kaepernick",26,4);
 	Person* db = new Person("Drew","Brees",35,4);
 	Person* tb = new Person("Tom","Brady",36,4);
 
+	//add friends to each other's list
 	pm->add(al);
 	al->add(pm);
 	al->add(db);
@@ -17,19 +19,11 @@ int main()
 	al->add(ck);
 	cout<<pm->toFullString()<<endl<<endl;
 
+	//Will the store the size of actual friends in list
 	int list1Size,list2Size;
 
-	//listsize has no value right now
-
 	Person** list1=pm->getFriendList(list1Size);
-
-	/*
-		the getFriendList method passes by reference
-		in the method, give it same value
-		when you return now it points to the same address (size and listSize)
-		they are the same thing
-		now we have the size of friends array pointers to persons
-	*/
+	
 
 	cout<<list1[0]->toFullString()<<endl<<endl;
 
